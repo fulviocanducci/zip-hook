@@ -1,0 +1,30 @@
+{
+  "name": "zip-hook",
+  "version": "0.0.1",
+  "description": "Zip Hook Web Service ViaCep.com",
+  "main": "index.js",
+  "repository": "https://github.com/fulviocanducci/zip-hook.git",
+  "author": "Fulvio Cezar Canducci Dias",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "webpack-dev-server --hot --port:8080"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-react": "^7.9.4",
+    "@types/react": "^16.9.25",
+    "@types/react-dom": "^16.9.5",
+    "babel-loader": "^8.1.0",
+    "html-webpack-plugin": "^4.0.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
