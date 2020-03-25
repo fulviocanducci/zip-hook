@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import { useState } from 'react'
 
-export default function useZipCode() {
+function useZipCode() {
     const [value, setValue] = useState('');    
-    const getValue = async() => {
+    const getZip = async() => {
         try {
             const response = await fetch(`http://viacep.com.br/ws/${value}/json/`, {mode: 'cors'});
             if (response.ok){
@@ -15,5 +15,7 @@ export default function useZipCode() {
         }        
         return false;
     }; 
-    return [value, setValue, getValue];
+    return [value, setValue, getZip];
 };
+
+export default useZipCode;

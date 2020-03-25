@@ -1,18 +1,20 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
+
 import useZipCode from '../lib'
 
 function App() {    
     const [value, setZipValue, getZipValue] = useZipCode();   
+    const [v, setV] = useState({});
     const handleClick = async() => {
-        console.log(await getZipValue());        
+        setV(await getZipValue());        
     }
     return (
         <div>
             <div>
                 <input type="text" value={value} onChange={e => setZipValue(e.target.value)}  />
             </div>                        
-            <div>Cep: {value.localidade}</div>
+            <div>Cep: {v.localidade}</div>
             <div>
                 <button onClick={handleClick}>Find</button>
             </div>
